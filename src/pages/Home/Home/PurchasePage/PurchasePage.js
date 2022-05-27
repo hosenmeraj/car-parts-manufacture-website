@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 import Loading from '../../../shared/Loading';
+import { toast } from 'react-toastify';
 
 const PurchasePage = () => {
     const { id } = useParams()
@@ -22,7 +23,6 @@ const PurchasePage = () => {
                 setTools(data)
                 setOrderQuantity(data.minOrderQuantity)
                 setIsLoading(false)
-
 
             })
     }, [id, reload])
@@ -61,7 +61,11 @@ const PurchasePage = () => {
             body: JSON.stringify(orderSummary)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                toast("Order place successFully")
+                event.target.reset()
+            })
         fetch(`http://localhost:5000/service/${id}`, {
             method: "PUT",
             headers: {
