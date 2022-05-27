@@ -20,7 +20,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     useEffect(() => {
         if (user || gUser) {
-            // navigate(from, { replace: true });
+            navigate(from, { replace: true });
         }
     }, [user || gUser, navigate, from])
     if (loading || gLoading) {

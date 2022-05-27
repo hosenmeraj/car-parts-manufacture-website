@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Tyer",
+        "minOrderQuantity": 100,
+        "availableQuantity": 5000,
+        "description": "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark .",
+        "price": 10099,
+        "img": "https://i.ibb.co/PcGLdwz/tyer.jpg"
+    },
+    {
+        "_id": 2,
+        "name": "Sheat Cover",
+        "minOrderQuantity": 100,
+        "availableQuantity": 5000,
+        "description": "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark .",
+        "price": 9999,
+        "img": "https://i.ibb.co/ZJPYSK3/seat-cover.jpg"
+    },
+    {
+        "_id": 3,
+        "name": "Headlight",
+        "minOrderQuantity": 100,
+        "availableQuantity": 5000,
+        "description": "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark .",
+        "price": 3400,
+        "img": "https://i.ibb.co/PcGLdwz/tyer.jpg"
+    },
+    {
+        "_id": 4,
+        "name": "Break Show",
+        "minOrderQuantity": 100,
+        "availableQuantity": 5000,
+        "description": "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark .",
+        "price": 1200,
+        "img": "https://i.ibb.co/PcGLdwz/tyer.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "Plug",
+        "minOrderQuantity": 100,
+        "availableQuantity": 5000,
+        "description": "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark .",
+        "price": 1222,
+        "img": "https://i.ibb.co/PcGLdwz/tyer.jpg"
+    },
+    {
+        "_id": 6,
+        "name": "Ring",
+        "minOrderQuantity": 100,
+        "availableQuantity": 5000,
+        "description": "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark .",
+        "price": 90000,
+        "img": "https://i.ibb.co/PcGLdwz/tyer.jpg"
+    }
+]

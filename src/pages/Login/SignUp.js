@@ -17,9 +17,9 @@ const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, uError] = useUpdateProfile(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    // let from = location.state?.from?.pathname || "/";
+
     if (user || gUser) {
-        // navigate(from, { replace: true });
+
         navigate('/')
     }
     if (loading || gLoading || updating) {
