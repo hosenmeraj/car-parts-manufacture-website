@@ -33,7 +33,7 @@ const Navbar = () => {
                         {menubar}
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl">MaxWheel</a>
+                <a class="btn btn-ghost normal-case text-xl">Car Parts</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">

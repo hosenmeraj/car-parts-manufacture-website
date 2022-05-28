@@ -14,6 +14,7 @@ import Reviews from './pages/DashBoard/Reviews';
 import MyProfile from './pages/DashBoard/MyProfile';
 import Users from './pages/DashBoard/Users';
 import RequireAdmin from './pages/DashBoard/RequireAdmin';
+import Footer from './pages/shared/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+
         <Route path='/purchase/:id' element={<RequireAuth><PurchasePage></PurchasePage></RequireAuth>}></Route>
         <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
@@ -32,6 +34,7 @@ function App() {
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer />
     </div>
 
