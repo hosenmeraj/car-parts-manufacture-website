@@ -3,34 +3,38 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import Loading from '../shared/Loading';
 
 const SignUp = () => {
     const navigate = useNavigate()
     const location = useLocation()
+
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, uError] = useUpdateProfile(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-
-    if (user || gUser) {
-
-        navigate('/')
-    }
+    const [token] = useToken(user || gUser)
     if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
+
     let elementError
     if (error || gError || uError) {
         elementError = <p className='text-red-500 text-sm'>{error?.message || gError?.message || uError?.message}</p>
     }
+    if (token) {
+        // console.log(user || gUser)
+        navigate('/home')
+    }
     const onSubmit = async data => {
-        console.log(data)
+        // console.log(data)
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name })
         console.log("name update")
