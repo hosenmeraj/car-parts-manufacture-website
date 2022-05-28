@@ -27,8 +27,6 @@ function App() {
           <Route path='reviews' element={<Reviews></Reviews>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
         </Route>
-
-
       </Routes>
       <ToastContainer />
     </div>
