@@ -23,6 +23,6 @@ const useAdmin = user => {
                 })
         }
     }, [user])
-    return [admin]
+    return [admin, adminLoading]
 }
 export default useAdmin
