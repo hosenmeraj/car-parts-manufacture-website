@@ -12,9 +12,8 @@ const Navbar = () => {
     }
     const menubar = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/tools'>Tools</NavLink></li>
-        <li><NavLink to='/bussiness'>Bussiness</NavLink></li>
-        <li><NavLink to='/reviews'>Reviews</NavLink></li>
+        <li><NavLink to='/blog'>Blogs</NavLink></li>
+        <li><NavLink to='/portfolio'>Porfolio</NavLink></li>
         {
             user && <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
         }

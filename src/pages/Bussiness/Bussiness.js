@@ -31,7 +31,6 @@ const Bussiness = () => {
                     <div class="stat-value ">300+</div>
                     <div class="stat-desc text-2xl py-6">Feedback</div>
                 </div>
-
             </div>
         </>
     );

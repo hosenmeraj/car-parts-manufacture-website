@@ -15,6 +15,9 @@ import MyProfile from './pages/DashBoard/MyProfile';
 import Users from './pages/DashBoard/Users';
 import RequireAdmin from './pages/DashBoard/RequireAdmin';
 import Footer from './pages/shared/Footer';
+import Blogs from './pages/Home/Blogs/Blogs';
+import NotFound from './pages/shared/NotFound';
+import Portfolio from './pages/Home/Portfolio/Portfolio';
 
 function App() {
   return (
@@ -25,7 +28,8 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
-
+        <Route path='/blog' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/purchase/:id' element={<RequireAuth><PurchasePage></PurchasePage></RequireAuth>}></Route>
         <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
@@ -33,6 +37,7 @@ function App() {
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
